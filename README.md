@@ -13,9 +13,9 @@ The program was programmed in C and made use of the TAILQ structure defined in s
 ## Running
 ```shell
 make
-
 ./rr INPUT_FILE_NAME QUANTUM_LENGTH
-./rr processes.txt 3
+
+EXAMPLE RUN COMMAND: ./rr processes.txt 3
 ```
 
 The "make" command should be run in the same directory as the rr.c file and an object file is created. Then run './rr INPUT_FILE_NAME QUANTUM_LENGTH". For example, if my input file is named "processes.txt" and I want to use a quantum length of 3, I would run "./rr processes.txt 3" in the terminal.
