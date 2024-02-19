@@ -11,7 +11,7 @@ The program aims to compromise between waiting time and response time tradeoffs.
 ```shell
 TODO
 ```
-The program was programmed in C and made use of the TAILQ structure defined in sys/queue.h.
+The program was programmed in C and made use of the TAILQ structure defined in sys/queue.h. A queue was implemented with TAILQ to line the processses up and run them in a "First Come First Out" order. A quantum length is specified and the programs are run for the duration of the quanum length before the CPU cycles to the next process on the queue. The program runs all the input processes until all the processes are completed.
 
 ## Running
 
@@ -20,14 +20,21 @@ cmd for running TODO
 TODO
 ```
 
+The "make" command should be run in the same directory as the rr.c file and an object file is created. Then run './rr INPUT_FILE_NAME QUANTUM_LENGTH". For example, if my input file is named "processes.txt" and I want to use a quantum length of 3, I would run "./rr processes.txt 3" in the terminal.
+
 results TODO
 ```shell
 TODO
 
 ```
+The terminal should output the average waiting time and average response time that the Round Robin scheduling algorithm will yield. In the case of "./rr processes.txt 3", the average waiting time is 7.00 seconds and the average response time is 2.75 seconds.
+
+The command "python -m unittest" can also be run which will run the program on a set of test cases (specified in test_lab2.py) and output whether or not the test cases were passed.
 
 ## Cleaning up
 
 ```shell
 TODO
 ```
+
+The "make clean" command should be used to clean up the object executable after use.
