@@ -11,8 +11,6 @@ The program aims to compromise between waiting time and response time tradeoffs.
 The program was programmed in C and made use of the TAILQ structure defined in sys/queue.h. A queue was implemented with TAILQ to line the processses up and run them in a "First Come First Out" order. A quantum length is specified and the programs are run for the duration of the quanum length before the CPU cycles to the next process on the queue. The program runs all the input processes until all the processes are completed.
 
 ## Running
-
-cmd for running TODO
 ```shell
 make
 
@@ -22,7 +20,7 @@ make
 
 The "make" command should be run in the same directory as the rr.c file and an object file is created. Then run './rr INPUT_FILE_NAME QUANTUM_LENGTH". For example, if my input file is named "processes.txt" and I want to use a quantum length of 3, I would run "./rr processes.txt 3" in the terminal.
 
-results TODO
+## Results
 ```shell
 python -m unittest
 
