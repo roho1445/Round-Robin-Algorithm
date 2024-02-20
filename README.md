@@ -1,6 +1,6 @@
 # You Spin Me Round Robin
 
-The program models the 'Round Robin' Scheduling algorithm used by operating systems to ensure that all proceses get a fair share of the CPU. The Round Robin algorithm works by cylcing between all the processes and running each for a fixed time slice (called a quantum length).
+The program models the 'Round Robin' Scheduling algorithm used by operating systems to ensure that all processes get a fair share of the CPU. The Round Robin algorithm works by cycling between all the processes and running each for a fixed time slice (called a quantum length).
 
 A queue of processes is created, and when a process finishes its time cycle, it is put at the back of the queue and the next program at the beginning of the queue is run.
 
@@ -8,24 +8,26 @@ The program aims to compromise between waiting time and response time tradeoffs.
 
 ## Building
 
-The program was programmed in C and made use of the TAILQ structure defined in sys/queue.h. A queue was implemented with TAILQ to line the processses up and run them in a "First Come First Out" order. A quantum length is specified and the programs are run for the duration of the quantum length before the CPU cycles to the next process on the queue. The program runs all the input processes until all the processes are completed.
+The program was programmed in C and made use of the TAILQ structure defined in sys/queue.h. A queue was implemented with TAILQ to line the processes up and run them in a "First Come First Out" order. A quantum length is specified and the programs are run for the duration of the quantum length before the CPU cycles to the next process on the queue. The program runs all the input processes until all the processes are completed.
 
 ## Running
-CMD Run Command
+
+CMD Run Command:
 ```shell
 make
 ./rr INPUT_FILE_NAME QUANTUM_LENGTH
 ```
 
-Example Run Command
+Example Run Command:
 ```shell
-EXAMPLE RUN COMMAND: ./rr processes.txt 3
+./rr processes.txt 3
 ```
 
 The "make" command should be run in the same directory as the rr.c file and an object file is created. Then run './rr INPUT_FILE_NAME QUANTUM_LENGTH". For example, if my input file is named "processes.txt" and I want to use a quantum length of 3, I would run "./rr processes.txt 3" in the terminal.
 
 ## Results
-CMD Run Command
+
+CMD Run Command:
 ```shell
 python -m unittest
 
@@ -35,7 +37,8 @@ The terminal should output the average waiting time and average response time th
 The command "python -m unittest" can also be run which will run the program on a set of test cases (specified in test_lab2.py) and output whether or not the test cases were passed.
 
 ## Cleaning up
-CMD Run Command
+
+CMD Run Command:
 ```shell
 make clean
 ```
